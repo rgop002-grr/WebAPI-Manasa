@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI-Manasa", "WebAPI-Manasa\WebAPI-Manasa.csproj", "{218692C5-E16C-411F-BFA3-E6B40E8B139F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{218692C5-E16C-411F-BFA3-E6B40E8B139F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{218692C5-E16C-411F-BFA3-E6B40E8B139F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{218692C5-E16C-411F-BFA3-E6B40E8B139F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{218692C5-E16C-411F-BFA3-E6B40E8B139F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C74FEA8-A5B3-4698-B9A8-94EF7B27D226}
+	EndGlobalSection
+EndGlobal

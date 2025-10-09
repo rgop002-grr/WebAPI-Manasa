@@ -1,0 +1,6 @@
+@WebAPI_Manasa_HostAddress = http://localhost:5244
+
+GET {{WebAPI_Manasa_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
