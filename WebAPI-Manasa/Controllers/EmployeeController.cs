@@ -34,7 +34,7 @@ namespace WebAPI_Manasa.Controllers
 
             // Create token
             var token = new JwtSecurityToken(
-                issuer: "MyApp",
+                issuer: "Manasa",
                 audience: "MyAppUsers",
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(60),
