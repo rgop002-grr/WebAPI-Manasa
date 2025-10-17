@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using WebAPI_Manasa.Models;
 
 namespace WebAPI_Manasa.Controllers
 {
@@ -11,12 +13,18 @@ namespace WebAPI_Manasa.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        [HttpGet("Generate")]
-        public IActionResult GenerateToken()
+        [HttpPost("Generate")]
+        public IActionResult GenerateToken([FromBody] TokenRequest request)
         {
             // Static user data
-            string username = "JohnDoe";
-            string role = "Admin";
+            //string username = "JohnDoe";
+            //string role = "Role";
+            if (string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Role))
+            {
+                return BadRequest("Username and Role are required.");
+            }
+
+
 
             // Secret key (must be long & secure in production)
             string secretKey = "My_Super_Secret_Key_1234567899999";
@@ -24,8 +32,8 @@ namespace WebAPI_Manasa.Controllers
             // Create claims
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, username),
-                new Claim(ClaimTypes.Role, role)
+                new Claim(ClaimTypes.Name, request.Username),
+                new Claim(ClaimTypes.Role, request.Role)
             };
 
             // Create key and credentials
